@@ -1,0 +1,579 @@
+/* 
+
+Theme Name: My blog site
+Theme URL:
+Description:
+Author: Ryuto Kanazawa
+Version: 1.0.0
+
+*/
+
+html{
+    font-size: 100%;
+}
+
+body{
+    color: #242822;
+    font-family: "Sawarabi Mincho"; 
+}
+
+a{
+    text-decoration: none;
+}
+
+p{
+    font-size: 1.3rem;
+}
+
+img{
+    max-width: 100%;
+}
+
+li{
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+.site-title{
+    line-height: 1px;
+    font-weight: 600px;
+    font-size: 2.4rem;
+}
+
+.site-title a{
+    color: #24292e;
+    padding: 10px;
+    margin: 10px;
+}
+
+.wrapper{
+    max-width: 960px;
+    margin: 0 auto 50px auto;
+    font-size: 0.9rem;
+    padding: 0 4%;
+}
+
+.sec-title{
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* header */
+.header{
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #ffffff; /* 背景色はサイトのデザインに合わせてください */
+    width: 100%;
+    /* max-width: 960px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 4%;
+    height: 170px;
+}
+
+header ul{
+    display: flex;
+    padding: 10px 0;
+}
+
+.header ul li{
+    font-size: 0.9rem;
+    margin: 20px;
+    transition: all 0.2s;
+}
+
+.header ul li a{
+    color: #24292e;
+    white-space: nowrap;
+}
+
+.header ul li a:hover{
+    opacity: 0.5;
+}
+
+/*ドロップダウン */
+.menuBar ul li:hover{
+    background-color: #e4dede;
+}
+
+.subMenu-1 {
+    position: absolute; 
+    background-color: white; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: none;
+}
+
+.subMenu-1 ul {
+    display: flex;
+    flex-direction: column; 
+    padding: 0; 
+}
+
+.subMenu-1 ul li{
+    border-bottom: 1px dotted black;
+}
+
+.menuBar ul li:hover .subMenu-1 {
+    display: flex; 
+}
+
+/* burger contents */
+.header nav{
+    box-sizing: border-box;
+    position: fixed;
+    top: 60px;
+    display: none;
+    width: 100%;
+    height: calc(100% - 60px);
+    background: #fff;
+    opacity: 0.9;
+}
+
+.header nav ul{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header nav ul li a{
+    display: block;
+    padding: 25px;
+    border-radius: 5px;
+    color: #666;
+    font-size: 1.8rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+/* main-home*/
+.main-home{
+    margin-bottom: 80px;
+}
+
+.main-home img{
+    width: 100%;
+    max-width: 1920px;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* popular articles / new articles  */
+.slider img {
+    width: 100%; 
+    height: 120px; 
+    object-fit: cover; 
+    max-width: 280px; 
+    max-height: 150px; 
+}
+
+.slider{
+    visibility: hidden;
+}
+
+.slider.slick-initialized{
+    visibility: visible;
+}
+
+.slick-prev, .slick-next{
+    z-index: 1;
+}
+
+.slick-prev {
+    left: 10px;
+}
+
+.slick-next {
+    right: 10px;
+}
+
+
+/* contact */
+#contact p{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#contact dl{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#contact dt{
+    width: 70px;
+    margin-bottom: 10px;
+}
+
+#contact dd{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#contact dd input,
+#contact dd textarea{
+    width: 100%;
+    border: 1px solid #c8c8c8;
+    padding: 10px;
+}
+
+#contact dd textarea{
+    height: 10rem;
+}
+
+#contact .button{
+    text-align: center;
+}
+
+#contact .button input{
+    border: 1px solid #24292e;
+    padding: 15px 0;
+    width: 200px;
+    background-color: #24292e;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+#contact .button input:hover{
+    background-color: #fff;
+    color: #24292e;
+}
+
+/* footer */
+footer{
+    margin-top: 100px;
+    background-color: #000;
+    padding-bottom: 30px;
+    text-align: center;
+    align-items: center;
+}
+
+.footer-title{
+    padding: 10px;
+    color: #fff;
+}
+
+.contact-box{
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    height: 100%;
+    padding: 30px;
+}
+
+.icon{
+    color: #fff;
+    font-size: 40px;
+}
+
+.footer-line{
+    height: 1px;
+    width: 95%;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+/* main sub page*/
+.main-subPage{
+    margin-bottom: 20px;
+}
+
+.main-subPage img{
+    width: 100%;
+    max-width: 1920px;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* プライバシーポリシーリンクのスタイル */
+.privacy-policy {
+    color: #fff;
+    text-decoration: none; 
+    margin-top: 20px; 
+}
+
+.privacy-policy:hover {
+    text-decoration: underline; 
+}
+
+/* breadcrumb */
+ul.breadcrumb{
+    padding: 10px 16px;
+    list-style: none;
+    background-color: #fff;
+}
+
+ul.breadcrumb li{
+    display: inline;
+    font-size: 15px;
+}
+
+ul.breadcrumb li+li::before{
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+
+ul.breadcrumb li a{
+    color: #242822;
+    text-decoration: none;
+}
+
+ul.breadcrumb li a:hover{
+    color: #01447e;
+    text-decoration: underline;
+}
+
+/* blog */
+.blog ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 30px;
+}
+
+.blog ul li{
+    width: 30%;
+}
+
+.blog ul li img{
+    cursor: pointer;
+}
+
+.blog ul li img:hover{
+    transform: scale(1.2, 1.2);
+}
+
+.blog p{
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    font-size: medium;
+    color: #242822;
+}
+
+/* profile */
+figure.sec-title{
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+figure.sec-title img{
+    border-radius: 50%;
+    width: 25%;
+    height: 25%;
+}
+
+figure.sec-title h3{
+    padding: 10px;
+    margin: 10px;
+}
+
+figure.sec-title p{
+    padding: 10px;
+    margin: 10px;
+}
+
+/* Career */
+.career{
+    font-size: 1.2rem;
+}
+
+.monthsAndYears{
+    white-space: nowrap;
+    vertical-align: top;
+}
+
+/* single-page bottom-bar */
+.nav-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.page-nav {
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.page-nav li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.page-nav li a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 15px;
+    border: 1px solid #333;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.page-nav li a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Smart Phone */
+@media screen and (max-width: 867px) {
+    /* header */
+    .menuBar,
+    .subMenu-1,
+    .pc,
+    .menu1,
+    .menu2,
+    .menu3{
+        display: none;
+    }
+
+    .main-home img{
+        width: 100vm;
+        height: 200px; 
+    }
+
+    .main-subPage img{
+        width: 100vm;
+        height: 200px; 
+    }
+
+    .burger{
+        display: block;
+        width: 44px;
+        aspect-ratio: 1;
+        border: none;
+        background-color: #ddd;
+    }
+
+    .burger span{
+        display: block;
+        width: 70%;
+        height: 2px;
+        background-color: #000;
+    }
+
+    .header {
+        height: auto; /* 高さを自動調整に変更 */
+        padding: 20px 0%; /* パディングの調整（お好みで） */
+    }
+
+    .header ul {
+        flex-direction: column; /* ul要素内のリストアイテムを縦に並べる */
+        padding: 0; /* 上下のパディングを0に設定 */
+        align-items: center; /* 子要素を中央揃えに */
+    }
+
+    .header ul li {
+        margin: 10px 0; /* リストアイテムのマージンを上下に設定 */
+    }
+
+    .sec-title a{
+        padding: 10px;
+        margin: 10px;
+    }
+    
+    /* burger */
+    #drawer_toggle{
+        display: grid;
+        width: 44px;
+        place-items: center;
+        aspect-ratio: 1;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        &:hover{
+            background-color: #eee;
+        }
+    }
+
+    #drawer_toggle span{
+        display: block;
+        width: 70%;
+        height: 2px;
+        background-color: #000;
+        grid-area: 1 / 1 / -1 / -1;
+        &:nth-child(2){
+            translate: 0 -.5rem;
+        }
+        &:nth-child(3){
+            translate: 0 .5rem;
+        }
+    }
+
+    /* burger contents */
+    #global_nav nav{
+        display: inline-block;
+        position: absolute;
+        top: 22px;
+        right: 0;
+        width: auto;
+        height: auto;
+        margin-right: 15px;
+        font-size: 1.4rem;
+        opacity: 1;
+    }
+
+    #global_nav nav ul{
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: unset;
+    }
+
+    #global_nav ul li{
+        display: inline-block;
+        height: 35px;
+        border-radius: 2px;
+        line-height: 35px;
+    }
+
+    #global_nav ul li a{
+        display: block;
+        padding: 0 15px;
+        color: #000;
+        font-size: unset;
+        text-decoration: none;
+        transition: color .3s;
+    }
+
+    #global_nav ul li:hover{
+        background-color: #666;
+    }
+
+    #global_nav ul li:hover a{
+        color: #fff;
+    }
+
+    /* Button */
+    #drawer_toggle.open span{
+        top: 29px;
+        left: 14px;
+        width: 30px;
+        margin: 0;
+        &:nth-child(3) {
+            translate: 0 0rem;
+        }
+    }
+
+    #drawer_toggle.open span:first-child{
+        transform: rotate(45deg);
+    }
+
+    #drawer_toggle.open span:nth-child(2){
+        display: none;
+    }
+
+    #drawer_toggle.open span:last-child{
+        transform: rotate(-45deg);
+    }
+}
+
+    
